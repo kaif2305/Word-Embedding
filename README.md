@@ -43,7 +43,7 @@ This project utilizes **GloVe (Global Vectors for Word Representation)** embeddi
 **How it's used in this code:**
 
 * **Downloading GloVe**: You need to download the GloVe embeddings file. For this project, the `glove.6B.100d.txt` file is used, which contains 100-dimensional embeddings trained on a 6 Billion token corpus.
-    * **Download Link**: You can download `glove.6B.zip` directly from Stanford NLP's website: **[http://nlp.stanford.edu/data/glove.6B.zip](http://nlp.stanford.edu/data/glove.6B.zip)**
+    * **Download Link**: You can download `glove.6B.zip` directly from Stanford NLP's website: **[http://nlp.stanford.edu/data/glove.6B.zip](https://nlp.stanford.edu/projects/glove/)**
     * **Unzip the file** after downloading it. Make sure `glove.6B.100d.txt` is accessible in your project directory (or specify its full path).
 * **Loading GloVe vectors**: The script reads `glove.6B.100d.txt` and parses each line to create a dictionary (`embedding_index`) where keys are words and values are their corresponding 100-dimensional GloVe vectors.
 * **Preparing Embedding Matrix**: An `embedding_matrix` is created. For each word in the IMDB vocabulary (up to `vocab_size`), if a corresponding GloVe vector exists, it is placed into this matrix at the word's index. Words not found in GloVe (or rare words outside `vocab_size`) will have a row of zeros.
